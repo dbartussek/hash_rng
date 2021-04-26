@@ -1,3 +1,5 @@
+#![no_std]
+
 pub mod hash;
 
 use crate::hash::seed_hash_64;
@@ -42,7 +44,7 @@ impl RngCore for Hash64Gen {
 }
 
 impl SeedableRng for Hash64Gen {
-    type Seed = [u8; std::mem::size_of::<u64>()];
+    type Seed = [u8; core::mem::size_of::<u64>()];
 
     /// Beware, a seed of 0 results in the first output being 0.
     fn from_seed(seed: Self::Seed) -> Self {
