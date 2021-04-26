@@ -1,0 +1,13 @@
+[package]
+name = "hash_rng"
+version = "0.1.0"
+authors = ["Dario Bartussek <d.bartussek@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+byteorder = "1.4.3"
+rand = "0.8.3"
+rand_core = "0.6.2"
+serde = "1.0.125"
+serde_derive = "1.0.125"
